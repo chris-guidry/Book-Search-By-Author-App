@@ -1,0 +1,14 @@
+body {
+    font-family: Ubuntu, sans-serif, "Helvetica Neue",Helvetica,Arial;
+    font-size: 16px;
+    color: $primaryFontColor;
+}
+.container.search {
+    text-align: center;
+}
+a:focus, a:hover {
+    text-decoration: none;
+}
+footer {
+    height: 5em;
+}

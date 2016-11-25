@@ -1,0 +1,9 @@
+<form name="bookSearchForm" ng-submit="bookSearch()">
+    <div class="initialSpacer" ng-hide="loaded">&#160;</div>
+    <h1>Book Search By Author</h1>
+    <input id="searchTerm" name="searchTerm" type="text" placeholder="Enter Author Name" ng-model="formData.searchTerm" focus="true" required="true"/>
+    <button class="searchButton">
+        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+    </button>
+    <div style="display:none">{{bookSearchForm.searchTerm.$valid}}</div>
+</form>

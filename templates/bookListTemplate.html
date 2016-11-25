@@ -1,0 +1,17 @@
+<div class="resultMessage" ng-show="filtered.length">{{filtered.length}} results :: sorted by date</div>
+<div ng-hide="filtered.length || !formData.searchTerm  || (formData.searchTerm && !loaded) || loading">No results found.</div>
+<div class="book" ng-repeat="book in books.items | orderBy : '-volumeInfo.publishedDate' | filter:query as filtered">
+    <a href="{{book.volumeInfo.previewLink}}" target="_blank" class="linkImage">
+        <img ng-src="{{book.volumeInfo.imageLinks.smallThumbnail}}" src="img/no-cover.jpg" width="50" height="80"/>
+    </a>
+    <div class="bookDetail">
+        <a href="{{book.volumeInfo.previewLink}}" target="_blank">
+            <span class="bookTitle">{{book.volumeInfo.title}}</span>
+        </a>
+        <span class="bookSubText">
+            by 
+            <a href="#" ng-click="authorClick(book.volumeInfo.authors[0])">{{book.volumeInfo.authors[0]}}</a>{{book.volumeInfo.authors[1] ? ' et al.' : ''}}, {{book.volumeInfo.publishedDate | limitTo: 4}}
+        </span>
+        <div>{{book.volumeInfo.description | limitTo: 250}}{{book.volumeInfo.description.length > 250 ? '...' : ''}}</div>
+    </div>
+</div>
