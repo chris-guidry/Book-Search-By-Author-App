@@ -25,8 +25,8 @@ API example: https://www.googleapis.com/books/v1/volumes?maxResults=10&q=inautho
     Firefox Console Error: "junk after document element" (bookListTemplate.html)
         The bookListTemplate.html template gets imported into index.html and Firefox interprets it as XML so it think's there's a problem with the syntax. It seems to be a Firefox bug: https://github.com/angular/angular.js/issues/7814
 
-##Sass - convert to one minified CSS file (would be automated with Gulp)
+##Sass - manually convert to one minified CSS file (handled by Gulp)
     sass sass/style.scss css/style.css  --style compressed
 
-##JS - convert to one minified JS file (would be automated with Gulp)
+##JS - manually convert to one minified JS file (handled by Gulp)
     uglifyjs js/app.js services/*.js controllers/*.js --output js/script.js --source-map js/script.js.map --compress
