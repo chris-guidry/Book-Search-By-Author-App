@@ -1,1 +1,1 @@
-var app = angular.module('bookSearch', ['bookController', 'bookService']);
+var app = angular.module('BookApp', []);

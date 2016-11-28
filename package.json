@@ -1,0 +1,27 @@
+{
+  "name": "bookapp",
+  "version": "1.0.0",
+  "description": "App uses Google Books API and built with Angular, Bootstrap, Sass, UglifyJS 2, and Font Awesome.",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^2.0.0"
+  },
+  "scripts": {
+    "test": "NODE_ENV=test mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chris-guidry/Book-Search-By-Author-App.git"
+  },
+  "author": "Chris Guidry",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chris-guidry/Book-Search-By-Author-App/issues"
+  },
+  "homepage": "https://github.com/chris-guidry/Book-Search-By-Author-App#readme"
+}
