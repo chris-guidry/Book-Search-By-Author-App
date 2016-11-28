@@ -28,12 +28,13 @@ app.controller("bookController", ["$scope", "$location", "$http","Books", functi
         $scope.bookSearch();
     };
     }])
-    .directive("focus", function($timeout) {
+    .directive("focus", ["$timeout", function($timeout) {
         return {
             scope : {
                 trigger : "@focus"
             },
             link : function(scope, element) {
+                //$scope.bookController = this;
                 scope.$watch("trigger", function(value) {
                     if (value === "true") {
                         $timeout(function() {
@@ -43,4 +44,4 @@ app.controller("bookController", ["$scope", "$location", "$http","Books", functi
                 });
             }
         };
-    });
+    }]);
