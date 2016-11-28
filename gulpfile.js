@@ -1,7 +1,7 @@
 var gulp = require("gulp");
 var sass = require("gulp-sass");
-var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
+var concat = require("gulp-concat");
+var uglify = require("gulp-uglify");
 
 gulp.task("sass", function () {
     return gulp.src("./sass/**/*.scss")
@@ -11,9 +11,9 @@ gulp.task("sass", function () {
 
 gulp.task("js", function () {
     return gulp.src(["js/app.js", "services/*.js", "controllers/*.js"])
-        .pipe(concat('script.js'))
+        .pipe(concat("script.js"))
         .pipe(uglify())
-        .pipe(gulp.dest('js/'));
+        .pipe(gulp.dest("js/"));
 });
 
 //Watch task
