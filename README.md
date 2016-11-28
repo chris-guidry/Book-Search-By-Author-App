@@ -6,11 +6,11 @@ API example: https://www.googleapis.com/books/v1/volumes?maxResults=10&q=inautho
     For most browsers, open file index.html. For Chrome, view the "Browser Support" section.
 
 ##Modify App
-    ### Requirements
+    Requirements
         - [Node and npm](http://nodejs.org)
 
 
-    ### Installation
+    Installation
         1. Clone the repository https://github.com/chris-guidry/Book-Search-By-Author-App
         2. Install the application: "npm install"
         3. Run Gulp so that JS and Sass changes get applied: "gulp"
