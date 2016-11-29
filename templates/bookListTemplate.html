@@ -1,6 +1,6 @@
-<div class="resultMessage" ng-show="filtered.length">{{filtered.length}} results :: sorted by date</div>
+<div class="resultMessage" ng-show="filtered.length">{{pagination.totalItems}} results :: sorted by date</div>
 <div ng-hide="filtered.length || !formData.searchTerm  || (formData.searchTerm && !loaded) || loading">No results found.</div>
-<div class="book" ng-repeat="book in books.items | orderBy : '-volumeInfo.publishedDate' | filter:query as filtered">
+<div class="book" ng-repeat="book in booksPage | orderBy : '-volumeInfo.publishedDate' | filter:query as filtered">
     <a href="{{book.volumeInfo.previewLink}}" target="_blank" class="linkImage">
         <img ng-src="{{book.volumeInfo.imageLinks.smallThumbnail}}" src="img/no-cover.jpg" width="50" height="80"/>
     </a>
@@ -15,3 +15,4 @@
         <div>{{book.volumeInfo.description | limitTo: 250}}{{book.volumeInfo.description.length > 250 ? '...' : ''}}</div>
     </div>
 </div>
+<ul ng-show="pagination.totalItems > pagination.itemsPerPage" uib-pagination total-items="pagination.totalItems" ng-model="pagination.currentPage" ng-change="pageChanged()" items-per-page="pagination.itemsPerPage"></ul>
